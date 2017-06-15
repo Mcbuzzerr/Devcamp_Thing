@@ -1,0 +1,36 @@
+body {
+    background: #000;
+}
+td, p{
+    color: yellow;
+    font-size: 150%;
+    font-family: arial ;
+}
+div .all{
+    width: 1000px;
+    color: white;
+    height: 1000px;
+}
+div .more{
+    margin: 0 auto;
+    width: 1000px;
+    height: 500px;
+}
+a{
+    color: #223faa;
+    font-size: 100;
+    font-family: arial;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 50px;
+}
+th{
+    color: yellow;
+    font-size: 100%;
+    font-family: arial;
+}
+h1{
+    color: yellow;
+    font-size: 250%;
+    font-family: "times new roman", times, sarif;
+}
