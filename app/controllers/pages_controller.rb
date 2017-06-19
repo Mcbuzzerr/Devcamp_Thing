@@ -6,5 +6,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @Skills = Skill.all
+    @Posts = Blog.all
   end
 end
