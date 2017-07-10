@@ -1,7 +1,12 @@
 class PortfoliosController < ApplicationController
      def index
-       @port = Portfolio.all 
+       @port = Portfolio.all
      end
+     
+     def angular
+     @angular_portfolio_items = Portfolio.angular
+     end
+ 
      def new
         @port = Portfolio.new
      end
@@ -44,5 +49,4 @@ class PortfoliosController < ApplicationController
       format.html { redirect_to portfolios_url, notice: 'Bat Portfolio Deleted.' }
       end
      end
-     
 end
