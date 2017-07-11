@@ -1,12 +1,18 @@
 class PortfoliosController < ApplicationController
      def index
-       @port = Portfolio.all 
+       @port = Portfolio.all
      end
+     
+     def angular
+     @angular_portfolio_items = Portfolio.angular
+     end
+ 
      def new
         @port = Portfolio.new
+        3.times { @port.technologies.build }
      end
      def create
-     @port = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+     @port = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
      respond_to do |format|
        if @port.save
@@ -44,5 +50,4 @@ class PortfoliosController < ApplicationController
       format.html { redirect_to portfolios_url, notice: 'Bat Portfolio Deleted.' }
       end
      end
-     
 end

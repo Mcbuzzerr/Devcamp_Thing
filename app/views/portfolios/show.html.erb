@@ -5,3 +5,9 @@
 <em><%= @port.subtitle %></em>
 
 <p><%= @port.body %></p>
+
+<h2>Tchnology Used</h2>
+
+<% @port.technologies.each do |t| %>
+<p><%= t.name %></p>
+<% end %>
